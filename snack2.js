@@ -18,13 +18,33 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const puntiFalli = randomInt(1,30)
-console.log(puntiFalli)
 
-for (let i=0; i<teams.length; i++) {
+for (let i = 0; i < teams.length; i++) {
     const curTeams = teams[i];
     console.log(curTeams)
-    curTeams.punti = puntiFalli
-    curTeams.falliSubiti = puntiFalli
+    curTeams.punti = randomInt(1, 30)
+    curTeams.falliSubiti = randomInt(1, 30)
 
-} console.log(teams)
+}
+
+console.table(teams)
+
+// New Array
+
+let newArray = []
+
+for (let i = 0; i < teams.length; i++) {
+
+    const curTeams = teams[i];
+
+    const newTeam = {
+        nome: curTeams.nome,
+        falliSubiti: curTeams.falliSubiti
+    };
+
+    newArray.push(newTeam)
+
+}
+
+console.table(newArray)
+

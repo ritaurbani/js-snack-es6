@@ -15,11 +15,13 @@ const bici = [
 
 let min = bici[0]
 
+console.table(bici);
+
 for (let i = 0; i < bici.length; i++) {
     const curBici = bici[i]
     console.log(curBici)
-    if (curBici.peso < min) {
+    if (curBici.peso < min.peso) {
         min = curBici
         console.log(curBici)
     }
-} console.log(min)
+} console.log("il valore minimo è", min)
